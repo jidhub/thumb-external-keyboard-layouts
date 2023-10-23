@@ -4,64 +4,165 @@
 # https://neo-layout.org/Layouts/neo/
 # https://github.com/neo-layout/neo-layout/blob/master/A-REFERENZ-A/neo20.txt
 # https://git.neo-layout.org/neo/neo-layout/src/branch/master/android/multiling-o-keyboard_neo.json
+# https://android.googlesource.com/platform/frameworks/native/+/android-7.1.1_r58/include/input/InputEventLabels.h
 
 type OVERLAY
 
-# layer 3 modifiers
-map key 86 ALT_RIGHT
+map key 1 ESCAPE
+map key 2 1
+map key 3 2
+map key 4 3
+map key 5 4
+map key 6 5
+map key 7 6
+map key 8 7
+map key 9 8
+map key 10 9
+map key 11 0
+map key 12 MINUS
+map key 13 EQUALS
+map key 14 DEL # backspace.
+map key 15 TAB
+
+
+map key 16 A
+map key 17 Z
+map key 18 E
+map key 19 R
+map key 20 T
+map key 21 Y
+map key 22 U
+map key 23 I
+map key 24 O
+map key 25 P
+map key 26 LEFT_BRACKET
+map key 27 RIGHT_BRACKET
+map key 28 ENTER
+map key 29 CTRL_LEFT
+
+map key 30 Q
+map key 31 S
+map key 32 D
+map key 33 F
+map key 34 G
+map key 35 H
+map key 36 J
+map key 37 K
+map key 38 L
+map key 39 M
+map key 40 APOSTROPHE # e ö  ; je recherche encore dead '
+# cycle à suivre: sauver avec rsync, dans android-studio, File/Close project, "terminate process", reopen thumb project, run, eteindre puis ralluer clavier bluetoot, pous 
+
+map key 41 GRAVE # ` ~ ˀ dead ˙α ;
+map key 42 CAPS_LOCK # was SHIFT_LEFT
+map key 43 CTRL_RIGHT # backslash key
+map key 44 W
+map key 45 X
+map key 46 C
+map key 47 V
+map key 48 B
+map key 49 N
+map key 50 COMMA
+map key 51 SEMICOLON
+map key 52 PERIOD
+# slash turned in ALT_RIGHT for AltGr (better than SHIFT_RIGHT because otherwise shift right equals shift left combined with shift right ALT_RIGHT+w shows a menu in termux)
+map key 53 ALT_RIGHT # slash key
+# map key 53 A # il refuse, le clavier passe a querty
+# space truned in lshift
+# map key 57 SHIFT_LEFT # il refuse, le clavier passe a abcde, et si j eteins et rallume le clavier il passe a ewerty
+map key 54 SHIFT_RIGHT
+# map key 55 L
+# map key 56 M
+map key 57 SPACE
+# antislash fait "lettre greque"
 
 # layer 4 modifiers
 # can't use sym because it's handled and overridden by the system
-map key 43 SHIFT_RIGHT
-map key 58 SHIFT_RIGHT
+map key 58 PLUS # was CAPS_LOCK FAIT20231016 pas urgent capslock a transformer en egal
 # don't lose the actual functionality of the right lshift key. 
 # just make it undistinguuishable between it and the left lshift key.
-map key 54 SHIFT_LEFT
+map key 59 F1 # ^V in Android mode
+map key 60 F2 # ^C in Android mode
+map key 61 F3 # ^V in Android mode
+map key 62 F4 # FnAndroid leads to capslock
+map key 63 F5 # Fn steals PreviousTrack in Android mode
+map key 64 F6 # Fn steals PreviousTrack in Android mode
+map key 65 F7 # Fn steals (un)Pause in Android mode
+map key 66 F8 # Fn steals NextTrack in Android mode
+map key 67 F9 # Fn steals (un)Mute in Android mode
+map key 68 F10 # Fn steals Quieter in Android mode
+# map key 69 A
 
-map key 70 CAPS_LOCK
-map key 125 SCROLL_LOCK
+map key 70 APOSTROPHE # instead of SHIFT_RIGHT
+# map key 71 B
+# map key 72 C
+# map key 73 D
+# map key 74 E
+# map key 75 F
+# map key 76 G
+# map key 77 H
+# map key 78 I
+# map key 79 J
+# map key 80 K
+# map key 81 L
+# map key 82 M
+# map key 83 N
+# map key 84 O
+# map key 85 P
+# was Windows key
+# layer 3 modifiers
+map key 86 SCROLL_LOCK
+map key 87 F11 # Fn steals Louder in Android mode
+map key 88 F12 # et Delete aussi en mode android+Fn.
+#map key 89 S
+#map key 90 T
+#map key 91 U
+#map key 92 V
+#map key 93 W
+#map key 94 X
+#map key 95 Y
+#map key 96 Z
+map key 97 B
+map key 98 C
+map key 99 D
+map key 100 E
+map key 101 F
+map key 102 MOVE_HOME
+map key 103 DPAD_UP
+map key 104 PAGE_UP
+map key 105 DPAD_LEFT
+map key 106 DPAD_RIGHT
+map key 107 MOVE_END
+map key 108 DPAD_DOWN
+map key 109 PAGE_DOWN
+map key 110 N
+map key 111 O
+map key 112 P
+map key 113 S
+map key 114 T
+map key 115 U
+map key 116 V
+map key 117 W
+map key 118 X
+map key 119 Y
+map key 120 Z
+map key 121 G
+map key 122 H
+map key 123 I
+map key 124 J
+map key 125 SHIFT_LEFT # Fn makes it "(dis/en)able touchpad".
+map key 126 K
+map key 127 L
+map key 128 M
 
-map key 16 X
-map key 17 V
-map key 18 L
-map key 19 C
-map key 20 W
-map key 21 K
-map key 22 H
-map key 23 G
-map key 24 F
-map key 25 Q
 
-map key 30 U
-map key 31 I
-map key 32 A
-map key 33 E
-map key 34 O
-map key 35 S
-map key 36 N
-map key 37 R
-map key 38 T
-map key 39 D
-map key 40 Y
-
-map key 44 SEMICOLON
-map key 45 APOSTROPHE
-map key 46 BACKSLASH
-map key 47 P
-map key 48 Z
-map key 49 B
-map key 50 M
-map key 53 J
-
-map key 69 PLUS
-map key 83 NUMPAD_COMMA
-
-key GRAVE {
-  label: '\u0302'
-  base: '\u0302'
-  lshift, capslock: '\u030c'
-  capslock+lshift: '\u0302'
-  ralt, scrolllock: '\u0307'
+key EQUALS {
+  label: '='
+  base: '='
+  lshift, capslock: '+'
+  capslock+lshift: '='
+  ralt, scrolllock: '}' # \u0307 c'est dead point en haut.
+  ralt+lshift, ralt+capslock: '\u00a7' # ceci ne marche pas: fallback FORWARD_DEL
   scrolllock+ralt: '\u0302'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u030c'
   scrolllock+ralt+capslock+lshift: '\u0302'
@@ -72,25 +173,27 @@ key GRAVE {
 }
 
 key 1 {
-  label: '1'
-  base: '1'
-  lshift, capslock: '\u00b0'
-  capslock+lshift: '1'
-  ralt, scrolllock: '\u1043'
-  scrolllock+ralt: '1'
-  scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u00b0'
-  scrolllock+ralt+capslock+lshift: '1'
-  rshift: '\u00b9'
-  rshift+lshift: '\u2081'
-  ralt+rshift: '\u00ac'
+  label: '&'
+  base: '&'
+  lshift, capslock: '1'
+  capslock+lshift: '&'
+  ralt, scrolllock: '\u007c'
+  ralt+lshift, ralt+capslock: '!'
+  scrolllock+ralt: '4'
+  scrolllock+ralt+capslock+lshift: '6'
+  rshift: '7'
+  rshift+lshift: '8'
+  ralt+rshift: '9'
 }
 
 key 2 {
-  label: '2'
-  base: '2'
-  lshift, capslock: '\u00a7'
-  capslock+lshift: '2'
-  ralt, scrolllock: '\u1052'
+  label: '\u00e9'
+  base: '\u00e9'
+  lshift: '2'
+  capslock: '\u00c9'
+  capslock+lshift: '\u00e9'
+  ralt, scrolllock: '~'
+  ralt+lshift, ralt+capslock: '>'
   scrolllock+ralt: '2'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u00a7'
   scrolllock+ralt+capslock+lshift: '2'
@@ -100,13 +203,14 @@ key 2 {
 }
 
 key 3 {
-  label: '3'
-  base: '3'
-  lshift, capslock: '\u2113'
-  capslock+lshift: '3'
-  ralt, scrolllock: '\u2116'
+  label: '"'
+  base: '"'
+  lshift, capslock: '3'
+  capslock+lshift: '"'
+  ralt, scrolllock: '#'
+  ralt+lshift, ralt+capslock: '<'
   scrolllock+ralt: '3'
-  scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u2113'
+  scrolllock+ralt+lshift, scrolllock+ralt+capslock: '<'
   scrolllock+ralt+capslock+lshift: '3'
   rshift: '\u00b3'
   rshift+lshift: '\u2083'
@@ -114,11 +218,12 @@ key 3 {
 }
 
 key 4 {
-  label: '4'
-  base: '4'
-  lshift, capslock: '\u00bb'
-  capslock+lshift: '4'
-  ralt, scrolllock: none
+  label: '\u0027' # '
+  base: '\u0027'
+  lshift, capslock: '4'
+  capslock+lshift: '\u0027'
+  ralt, scrolllock: '{' # tiens none fait que ca ouvre un menu et le referme tout de suite.
+  ralt+lshift, ralt+capslock: '$'
   scrolllock+ralt: '4'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u00bb'
   scrolllock+ralt+capslock+lshift: '4'
@@ -128,11 +233,12 @@ key 4 {
 }
 
 key 5 {
-  label: '5'
-  base: '5'
-  lshift, capslock: '\u00ab'
-  capslock+lshift: '5'
-  ralt, scrolllock: '\u00b7'
+  label: '('
+  base: '('
+  lshift, capslock: '5'
+  capslock+lshift: '('
+  ralt, scrolllock: '['
+  ralt+lshift, ralt+capslock: '%'
   scrolllock+ralt: '5'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u00ab'
   scrolllock+ralt+capslock+lshift: '5'
@@ -142,11 +248,12 @@ key 5 {
 }
 
 key 6 {
-  label: '6'
-  base: '6'
-  lshift, capslock: '\u0024'
-  capslock+lshift: '6'
-  ralt, scrolllock: '\u00a3'
+  label: '-'
+  base: '-'
+  lshift, capslock: '6'
+  capslock+lshift: '-'
+  ralt, scrolllock: '|'
+  ralt+lshift, ralt+capslock: '^'
   scrolllock+ralt: '6'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u0024'
   scrolllock+ralt+capslock+lshift: '6'
@@ -156,11 +263,13 @@ key 6 {
 }
 
 key 7 {
-  label: '7'
-  base: '7'
-  lshift, capslock: '\u20ac'
-  capslock+lshift: '7'
-  ralt, scrolllock: '\u00a4'
+  label: '\u00e8'
+  base: '\u00e8'
+  lshift: '7'
+  capslock: '\u00c8'
+  capslock+lshift: '\u00e8'
+  ralt, scrolllock: '`'
+  ralt+lshift, ralt+capslock: '&'
   scrolllock+ralt: '7'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u20ac'
   scrolllock+ralt+capslock+lshift: '7'
@@ -170,11 +279,12 @@ key 7 {
 }
 
 key 8 {
-  label: '8'
-  base: '8'
-  lshift, capslock: '\u201e'
-  capslock+lshift: '8'
-  ralt, scrolllock: fallback TAB
+  label: '_'
+  base: '_'
+  lshift, capslock: '8'
+  capslock+lshift: '_'
+  ralt, scrolllock: '\\' # \backslash  ; la syntaxe autorise ralt, scrolllock: fallback TAB
+  ralt+lshift, ralt+capslock: '*'
   scrolllock+ralt: '8'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u201e'
   scrolllock+ralt+capslock+lshift: '8'
@@ -184,12 +294,14 @@ key 8 {
 }
 
 key 9 {
-  label: '9'
-  base: '9'
-  lshift, capslock: '\u201c'
-  capslock+lshift: '9'
-  ralt, scrolllock: '/'
+  label: '\u00e7'
+  base: '\u00e7'
+  lshift: '9'
+  capslock: '\u00c7'
+  capslock+lshift: '\u00e7'
+  ralt, scrolllock: '^'
   scrolllock+ralt: '9'
+  ralt+lshift, ralt+capslock: '('
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u201c'
   scrolllock+ralt+capslock+lshift: '9'
   rshift: '\u2018'
@@ -198,11 +310,13 @@ key 9 {
 }
 
 key 0 {
-  label: '0'
-  base: '0'
-  lshift, capslock: '\u201d'
-  capslock+lshift: '0'
-  ralt, scrolllock: '*'
+  label: '\u00e0'
+  base: '\u00e0'
+  lshift: '0'
+  capslock: '\u00c0'
+  capslock+lshift: '\u00e0'
+  ralt, scrolllock: '@'
+  ralt+lshift, ralt+capslock: ')'
   scrolllock+ralt: '0'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u201d'
   scrolllock+ralt+capslock+lshift: '0'
@@ -211,7 +325,7 @@ key 0 {
   ralt+rshift: '\u2205'
 }
 
-key MINUS {
+key RIGHT_BRACKET {
   label: '-'
   base: '-'
   lshift, capslock: '\u2014'
@@ -225,7 +339,7 @@ key MINUS {
   ralt+rshift: '\u254c'
 }
 
-key EQUALS {
+key GRAVE {
   label: '\u0300'
   base: '\u0300'
   lshift, capslock: '\u0327'
@@ -272,7 +386,8 @@ key L {
   base: 'l'
   lshift, capslock: 'L'
   capslock+lshift: 'l'
-  ralt, scrolllock: fallback DPAD_UP
+  ralt, scrolllock: fallback DPAD_RIGHT
+  ralt+lshift, ralt+capslock: fallback DPAD_RIGHT
   scrolllock+ralt: 'l'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'L'
   scrolllock+ralt+capslock+lshift: 'l'
@@ -314,7 +429,8 @@ key K {
   base: 'k'
   lshift, capslock: 'K'
   capslock+lshift: 'k'
-  ralt, scrolllock: '\u00a1'
+  ralt, scrolllock: '\u2191' # ↑ up arrow case '↙': return '⇙'; case '↓': return '⇓'; case '↘': return '⇘'; case '1': return '!'; case '&': return '\u007c'; case 'é': return '2'; case '~': return '>'; case '←': return '⇐'; case '→': return '⇒'; case '↖': return '⇖'; case '↑': return '⇑'; case '↗': return '⇗';
+  ralt+lshift, ralt+capslock: '\u2b06' # ⬆ up arrow
   scrolllock+ralt: 'k'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'K'
   scrolllock+ralt+capslock+lshift: 'k'
@@ -328,7 +444,8 @@ key H {
   base: 'h'
   lshift, capslock: 'H'
   capslock+lshift: 'h'
-  ralt, scrolllock: '7'
+  ralt, scrolllock: fallback DPAD_LEFT
+  ralt+lshift, ralt+capslock: fallback DPAD_LEFT
   scrolllock+ralt: 'h'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'H'
   scrolllock+ralt+capslock+lshift: 'h'
@@ -341,7 +458,8 @@ key G {
   base: 'g'
   lshift, capslock: 'G'
   capslock+lshift: 'g'
-  ralt, scrolllock: '8'
+  ralt, scrolllock: '-'
+  ralt+lshift, ralt+capslock: '6'
   scrolllock+ralt: 'g'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'G'
   scrolllock+ralt+capslock+lshift: 'g'
@@ -355,8 +473,8 @@ key F {
   base: 'f'
   lshift, capslock: 'F'
   capslock+lshift: 'f'
-  ralt, scrolllock: '9'
-  scrolllock+ralt: 'f'
+  ralt, scrolllock: '\u00e8'
+  ralt+lshift, ralt+capslock: '7'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'F'
   scrolllock+ralt+capslock+lshift: 'f'
   rshift: '='
@@ -369,8 +487,8 @@ key Q {
   base: 'q'
   lshift, capslock: 'Q'
   capslock+lshift: 'q'
-  ralt, scrolllock: '+'
-  scrolllock+ralt: 'q'
+  ralt, scrolllock: '\u001b' # escape
+  ralt+lshift, ralt+capslock: '\u001b' # escape
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'Q'
   scrolllock+ralt+capslock+lshift: 'q'
   rshift: '&'
@@ -392,12 +510,13 @@ key LEFT_BRACKET {
   ralt+rshift: '\u2218'
 }
 
-key RIGHT_BRACKET {
-  label: '\u0301'
-  base: '\u0301'
-  lshift, capslock: '\u0303'
-  capslock+lshift: '\u0301'
-  ralt, scrolllock: '\u030b'
+key MINUS {
+  label: ')'
+  base: ')' # \u0301 is dead accent aigu
+  lshift, capslock: '\u00b0' # °
+  capslock+lshift: ')'
+  ralt, scrolllock: ']'
+  ralt+lshift, ralt+capslock: '}' # and not _ which is on qwerty.
   scrolllock+ralt: '\u0301'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u0303'
   scrolllock+ralt+capslock+lshift: '\u0301'
@@ -412,7 +531,8 @@ key U {
   base: 'u'
   lshift, capslock: 'U'
   capslock+lshift: 'u'
-  ralt, scrolllock: fallback MOVE_HOME
+  ralt, scrolllock: 'y'
+  ralt+lshift, ralt+capslock: 'Y'
   scrolllock+ralt: 'u'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'U'
   scrolllock+ralt+capslock+lshift: 'u'
@@ -426,7 +546,8 @@ key I {
   base: 'i'
   lshift, capslock: 'I'
   capslock+lshift: 'i'
-  ralt, scrolllock: fallback DPAD_LEFT
+  ralt, scrolllock: '&'
+  ralt+lshift, ralt+capslock: '1'
   scrolllock+ralt: 'i'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'I'
   scrolllock+ralt+capslock+lshift: 'i'
@@ -440,8 +561,8 @@ key A {
   base: 'a'
   lshift, capslock: 'A'
   capslock+lshift: 'a'
-  ralt, scrolllock: fallback DPAD_DOWN
-  scrolllock+ralt: 'a'
+  ralt, scrolllock: '='
+  ralt+lshift, ralt+capslock: '+'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'A'
   scrolllock+ralt+capslock+lshift: 'a'
   rshift: '{'
@@ -454,7 +575,8 @@ key E {
   base: 'e'
   lshift, capslock: 'E'
   capslock+lshift: 'e'
-  ralt, scrolllock: fallback DPAD_RIGHT
+  ralt, scrolllock: '\u00ea' # ê
+  ralt+lshift, ralt+capslock: '\u20ac' # euro
   scrolllock+ralt: 'e'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'E'
   scrolllock+ralt+capslock+lshift: 'e'
@@ -468,7 +590,8 @@ key O {
   base: 'o'
   lshift, capslock: 'O'
   capslock+lshift: 'o'
-  ralt, scrolllock: fallback MOVE_END
+  ralt, scrolllock: '\u00f4' # ô
+  ralt+lshift, ralt+capslock: '\u00d4' # Ô
   scrolllock+ralt: 'o'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'O'
   scrolllock+ralt+capslock+lshift: 'o'
@@ -482,8 +605,8 @@ key S {
   base: 's'
   lshift, capslock: 'S'
   capslock+lshift: 's'
-  ralt, scrolllock: '\u00bf'
-  scrolllock+ralt: 's'
+  ralt, scrolllock: '\u0008' # ^H
+  ralt+lshift, ralt+capslock: '\u0008' # ^H
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'S'
   scrolllock+ralt+capslock+lshift: 's'
   rshift: '?'
@@ -496,7 +619,8 @@ key N {
   base: 'n'
   lshift, capslock: 'N'
   capslock+lshift: 'n'
-  ralt, scrolllock: '4'
+  ralt, scrolllock: 'b'
+  ralt+lshift, ralt+capslock: 'B'
   scrolllock+ralt: 'n'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'N'
   scrolllock+ralt+capslock+lshift: 'n'
@@ -538,7 +662,8 @@ key D {
   base: 'd'
   lshift, capslock: 'D'
   capslock+lshift: 'd'
-  ralt, scrolllock: ','
+  ralt, scrolllock: '|'
+  ralt+lshift, ralt+capslock: '`'
   scrolllock+ralt: 'd'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'D'
   scrolllock+ralt+capslock+lshift: 'd'
@@ -552,7 +677,8 @@ key Y {
   base: 'y'
   lshift, capslock: 'Y'
   capslock+lshift: 'y'
-  ralt, scrolllock: '.'
+  ralt, scrolllock: '\u00f9' # ù
+  ralt+lshift, ralt+capslock: '\u00d9' # Ù
   scrolllock+ralt: 'y'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'Y'
   scrolllock+ralt+capslock+lshift: 'y'
@@ -562,31 +688,19 @@ key Y {
 }
 
 key SEMICOLON {
-  label: '\u00fc'
-  base: '\u00fc'
-  lshift, capslock: '\u00dc'
-  capslock+lshift: '\u00fc'
-  ralt, scrolllock: fallback DEL
-  scrolllock+ralt: '\u00fc'
-  scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u00dc'
-  scrolllock+ralt+capslock+lshift: '\u00fc'
-  rshift: '#'
-  rshift+lshift: none
-  ralt+rshift: '\u222a'
+  label: ';'
+  base: ';'
+  lshift, capslock: '.'
+  capslock+lshift: ';'
+  ralt, scrolllock: '|'
+  ralt+lshift, ralt+capslock: '`'
 }
 
 key APOSTROPHE {
-  label: '\u00f6'
-  base: '\u00f6'
-  lshift, capslock: '\u00d6'
-  capslock+lshift: '\u00f6'
-  ralt, scrolllock: fallback TAB
-  scrolllock+ralt: '\u00f6'
-  scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u00d6'
-  scrolllock+ralt+capslock+lshift: '\u00f6'
-  rshift: '$'
-  rshift+lshift: '\u03f5'
-  ralt+rshift: '\u2229'
+  label: '!'
+  base: '!'
+  lshift, capslock: '\u00a7'
+  capslock+lshift: '!'
 }
 
 key BACKSLASH {
@@ -647,7 +761,8 @@ key M {
   base: 'm'
   lshift, capslock: 'M'
   capslock+lshift: 'm'
-  ralt, scrolllock: '1'
+  ralt, scrolllock: '\u000A' # ^J
+  ralt+lshift, ralt+capslock: '\u000D' # ^M
   scrolllock+ralt: 'm'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'M'
   scrolllock+ralt+capslock+lshift: 'm'
@@ -659,7 +774,7 @@ key M {
 key COMMA {
   label: ','
   base: ','
-  lshift, capslock: '\u2013'
+  lshift, capslock: '?'
   capslock+lshift: ','
   ralt, scrolllock: '2'
   scrolllock+ralt: ','
@@ -671,11 +786,11 @@ key COMMA {
 }
 
 key PERIOD {
-  label: '.'
-  base: '.'
-  lshift, capslock: '\u2022'
-  capslock+lshift: '.'
-  ralt, scrolllock: '3'
+  label: ':'
+  base: ':'
+  lshift, capslock: '/'
+  capslock+lshift: ':'
+  ralt, scrolllock: ':'
   scrolllock+ralt: '.'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u2022'
   scrolllock+ralt+capslock+lshift: '.'
@@ -689,7 +804,8 @@ key J {
   base: 'j'
   lshift, capslock: 'J'
   capslock+lshift: 'j'
-  ralt, scrolllock: ';'
+  ralt, scrolllock: fallback DPAD_DOWN
+  ralt+lshift, ralt+capslock: fallback DPAD_DOWN
   scrolllock+ralt: 'j'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'J'
   scrolllock+ralt+capslock+lshift: 'j'
@@ -708,12 +824,11 @@ key SPACE {
 
 
 key PLUS {
-  label: '\u21e5'
-  base: fallback TAB
-  ralt, scrolllock: '\u2620'
-  rshift: '='
-  rshift+lshift: '\u2248'
-  ralt+rshift: '\u2261'
+  label: '='
+  base: '='
+  lshift, capslock: '+'
+  capslock+lshift: '='
+  ralt, scrolllock: '}'
 }
 
 key NUMPAD_DIVIDE {
@@ -905,3 +1020,5 @@ key NUMPAD_9 {
   rshift+lshift: '\u226b'
   ralt+rshift: '\u2309'
 }
+# noremap à :w<bar>!scp ioanamanolescu@192.168.37.15:thumb-external-keyboard-layouts/app/src/main/res/raw/keyboard_layout_neo2.kcm /data/data/com.termux/files/home/p/r/20231016.keyboard ; rsync -avz /data/data/com.termux/files/home/p/r/K/INFORMATIQUE/android/historiques/thumb-external-keyboard-layouts ioanamanolescu@192.168.37.15: ; cvs commit -m sauver<c-m>
+
