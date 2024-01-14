@@ -1,5 +1,4 @@
-# Extra Physical Keyboard Layouts
-## Development on pause until September 2024
+# Extrernal Keyboard Layout for thumbs
 Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, because its touchpad is below the keyboard to be able to lay my wrists. The Neo2 layout added by this github project ensures that the two left and right keys around the space key have this effect:
 
 Alt Shift Space AltGr Control
@@ -13,7 +12,6 @@ It think [this keyboard still available](https://www.amazon.fr/KIMISS-Chargeur-U
 
 To build it on vim I execute the noremap on next line, then in android-studio, I use File/Close project, "terminate process", reopen this thumb project, use "run", switch off then on my bluetooth keyboard.
 The noremap is: noremap à :w<bar>!scp mol8_adb:thumb-external-keyboard-layouts/app/src/main/res/raw/keyboard_layout_neo2.kcm /data/data/com.termux/files/home/p/r/20231016.keyboard ; rsync -avz /data/data/com.termux/files/home/p/r/K/INFORMATIQUE/android/historiques/thumb-external-keyboard-layouts mol8_adb: ; cvs commit -m sauver<c-m> 
-# This works despite this warning on Android-Studio macOS 2022.3.1p2 gradle 7.3.1: error running 'app': Unable to determine activity name
 
 When the bluetooth keyboard is connected, you should got to Android settings/Language and keyboard/external keyboard/choose your current on screen keyboard/select the keyboard neo2.
 
@@ -67,5 +65,7 @@ bind-key -n 0x21d3 send-keys S-Down)
 - understand how to uninstall this when installed by android-studio. I currently have 3 versions installed -_-.
 
 - strip all changes I made in app/src/main/java/varzan/extraKeyboardLayouts/InputDeviceReceiver.java because I do not understand or remember what they do, and they seem useless, and I just found out they have been never integrated in git so oh well (they are in my CVS history though ;-).
+
+- understand the warning on Android-Studio macOS 2022.3.1p2 gradle 7.3.1: error running 'app': Unable to determine activity name. The project works for me despite this warning.
 
 If you found this useful, you may [buy a drink to the project I forked](https://paypal.me/CalinDarie?locale.x=en_US) or ask for the Ergo-L community on Discord.
