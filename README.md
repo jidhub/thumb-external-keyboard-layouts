@@ -1,5 +1,5 @@
 # Extrernal Keyboard Layout for thumbs
-Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, because its touchpad is below the keyboard to be able to lay my wrists. The Neo2 layout added by this github project ensures that the two left and right keys around the space key have this effect:
+Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, and because its touchpad is below the keyboard which creates space for my wrists (useful to stabilize the keyboard on your own lap). The Neo2 layout added by this github project ensures that the two left and right keys around the space key have this effect:
 
 Alt Shift Space AltGr Control
 
@@ -71,5 +71,7 @@ bind-key -n 0x21d3 send-keys S-Down)
 - strip all changes I made in app/src/main/java/varzan/extraKeyboardLayouts/InputDeviceReceiver.java because I do not understand or remember what they do, and they seem useless, and I just found out they have been never integrated in git so oh well (they are in my CVS history though ;-).
 
 - understand the warning on Android-Studio macOS 2022.3.1p2 gradle 7.3.1: error running 'app': Unable to determine activity name. The project works for me despite this warning.
+
+- https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/screen1.jpg and other screenshots by screens showing an equivalent to https://en.wikipedia.org/wiki/File:KB_French_B%C3%89PO-NF_Z71-300.svg , and before that, learn how to make these images.
 
 If you found this useful, you may [buy a drink to the project I forked](https://paypal.me/CalinDarie?locale.x=en_US) or ask for the Ergo-L community on Discord.
