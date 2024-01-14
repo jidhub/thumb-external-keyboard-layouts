@@ -66,4 +66,6 @@ bind-key -n 0x21d3 send-keys S-Down)
 
 - understand how to uninstall this when installed by android-studio. I currently have 3 versions installed -_-.
 
+- strip all changes I made in app/src/main/java/varzan/extraKeyboardLayouts/InputDeviceReceiver.java because I do not understand or remember what they do, and they seem useless, and I just found out they have been never integrated in git so oh well (they are in my CVS history though ;-).
+
 If you found this useful, you may [buy a drink to the project I forked](https://paypal.me/CalinDarie?locale.x=en_US) or ask for the Ergo-L community on Discord.
