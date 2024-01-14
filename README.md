@@ -8,6 +8,9 @@ Warning, to this day I am the only user and this is the first time I am sharing 
 
 My philosophy is that a the learning curve for an azerty user is manageable.
 
+It think [this keyboard still available](https://www.amazon.fr/KIMISS-Chargeur-Ultraslim-Bluetooth-Touchpad/dp/B0C353T7J8) with a small space key is a clone of the keyboard I use, with the touchpad below the keyboard to be able to lay your wrists ([avoid others for confortable use](https://www.amazon.fr/Ovegna-Q9-rechargeable-R%C3%A9tro-%C3%A9clair%C3%A9e-Raspberry)).
+
+
 To build it on vim I execute the noremap on next line, then in android-studio, I use File/Close project, "terminate process", reopen this thumb project, use "run", switch off then on my bluetooth keyboard.
 The noremap is: noremap à :w<bar>!scp mol8_adb:thumb-external-keyboard-layouts/app/src/main/res/raw/keyboard_layout_neo2.kcm /data/data/com.termux/files/home/p/r/20231016.keyboard ; rsync -avz /data/data/com.termux/files/home/p/r/K/INFORMATIQUE/android/historiques/thumb-external-keyboard-layouts mol8_adb: ; cvs commit -m sauver<c-m> 
 # This works despite this warning on Android-Studio macOS 2022.3.1p2 gradle 7.3.1: error running 'app': Unable to determine activity name
