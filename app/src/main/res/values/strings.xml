@@ -158,6 +158,6 @@
 	<string name="keyboard_layout_uzbek_cyrillic">Uzbek Cyrillic</string>
 	<string name="keyboard_layout_vietnamese">Vietnamese</string>
 	<string name="keyboard_layout_wolof">Wolof</string>
-  <string name="app_name">Thumb Externa Keyboard Layouts</string>
-  <string name="keyboard_layouts_label">Thumb external keyboard layout</string>
+  <string name="app_name">Thumb External Keyboard Layout</string>
+  <string name="keyboard_layouts_label">Thumb External Keyboard Layout</string>
 </resources>

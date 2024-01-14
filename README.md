@@ -2,10 +2,16 @@
 ## Development on pause until September 2024
 To România and beyond!
 
-[<img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80px"/>](https://play.google.com/store/apps/details?id=varzan.extraKeyboardLayouts)
-[<img alt='Get it on IzzyOnDroid' src='https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png' height="80px"/>](https://apt.izzysoft.de/fdroid/index/apk/varzan.extraKeyboardLayouts)
+[<img alt='Get it on Fdroid.org (not yet)' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80px"/>](http://f-foid.org)
+[<img alt='Not paying to put it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80px"/>](https://play.google.com/store/apps/details?id=varzan.extraKeyboardLayouts)
+[<img alt='Don t yet have confidence in IzzyOnDroid' src='https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png' height="80px"/>](https://apt.izzysoft.de/fdroid/index/apk/varzan.extraKeyboardLayouts)
 
-Adds a few choices to the list of layouts to use when a physical keyboard is connected e.g. via OTG or Bluetooth.
+To build it on vim execute following noremap, then in android-studio, use File/Close project, "terminate process", reopen thumb project, run, eteindre puis ralluer clavier bluetoot.
+The noremap is: noremap à :w<bar>!scp mol8_adb:thumb-external-keyboard-layouts/app/src/main/res/raw/keyboard_layout_neo2.kcm /data/data/com.termux/files/home/p/r/20231016.keyboard ; rsync -avz /data/data/com.termux/files/home/p/r/K/INFORMATIQUE/android/historiques/thumb-external-keyboard-layouts mol8_adb: ; cvs commit -m sauver<c-m> 
+# This works despite this warning on Android-Studio macOS 2022.3.1p2 gradle 7.3.1: error running 'app': Unable to determine activity name
+
+I modified app/src/main/res/raw/keyboard_layout_neo2.kcm and app/src/main/res/values/strings.xml (last value keyboard_layouts_label appears in "Settings/General managment/Physical keyboard/Language and layout" provided a bluetooth keyboard is attached)
+In app/build.gradle and app/src/main/AndroidManifest.xml and app/src/main/java/varzan/extraKeyboardLayouts/InputDeviceReceiver.java, varzan.thumbExtrernalKeyboardLayouts should be different than the value for the last known working AndroidStudio installation.
 
 Please star this issue if you agree that Android should support these layouts out of the box: https://issuetracker.google.com/issues/155769655
 

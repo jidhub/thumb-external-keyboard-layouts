@@ -1,4 +1,4 @@
-package varzan.extraKeyboardLayouts;
+package varzan.thumbExtrernalKeyboardLayouts;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

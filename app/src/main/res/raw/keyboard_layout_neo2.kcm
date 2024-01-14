@@ -44,7 +44,7 @@ map key 30 Q
 map key 31 S
 map key 32 D
 map key 33 F
-map key 34 G
+map key 34 G # incompatible with 
 map key 35 H
 map key 36 J
 map key 37 K
@@ -70,7 +70,7 @@ map key 53 ALT_RIGHT # slash key
 # map key 53 A # il refuse, le clavier passe a querty
 # space truned in lshift
 # map key 57 SHIFT_LEFT # il refuse, le clavier passe a abcde, et si j eteins et rallume le clavier il passe a ewerty
-map key 54 SHIFT_RIGHT
+map key 54 APOSTROPHE # instead of SHIFT_RIGHT
 # map key 55 L
 # map key 56 M
 map key 57 SPACE
@@ -93,7 +93,7 @@ map key 67 F9 # Fn steals (un)Mute in Android mode
 map key 68 F10 # Fn steals Quieter in Android mode
 # map key 69 A
 
-map key 70 APOSTROPHE # instead of SHIFT_RIGHT
+map key 70 SHIFT_RIGHT
 # map key 71 B
 # map key 72 C
 # map key 73 D
@@ -353,6 +353,11 @@ key GRAVE {
   ralt+rshift: '\u00af'
 }
 
+key TAB {
+  label: 't' # only one char is possible here.
+  base: '\u0009' # tab. This does not work at all.
+}
+
 key X {
   label: 'x'
   base: 'x'
@@ -372,7 +377,8 @@ key V {
   base: 'v'
   lshift, capslock: 'V'
   capslock+lshift: 'v'
-  ralt, scrolllock: fallback DEL
+  ralt, scrolllock: '-'
+  ralt+lshift, ralt+capslock: '6' # et non sur G car AltGr Shift G semble ne pas m'obéir :-(
   scrolllock+ralt: 'v'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'V'
   scrolllock+ralt+capslock+lshift: 'v'
@@ -386,8 +392,8 @@ key L {
   base: 'l'
   lshift, capslock: 'L'
   capslock+lshift: 'l'
-  ralt, scrolllock: fallback DPAD_RIGHT
-  ralt+lshift, ralt+capslock: fallback DPAD_RIGHT
+  ralt, scrolllock: '\u2192' # with this in tmux.conf: bind-key -n 0x2192 send-keys Right
+  ralt+lshift, ralt+capslock: '\u21d2' # with this in tmux.conf: bind-key -n 0x21d2 send-keys S-Right
   scrolllock+ralt: 'l'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'L'
   scrolllock+ralt+capslock+lshift: 'l'
@@ -429,8 +435,8 @@ key K {
   base: 'k'
   lshift, capslock: 'K'
   capslock+lshift: 'k'
-  ralt, scrolllock: '\u2191' # ↑ up arrow case '↙': return '⇙'; case '↓': return '⇓'; case '↘': return '⇘'; case '1': return '!'; case '&': return '\u007c'; case 'é': return '2'; case '~': return '>'; case '←': return '⇐'; case '→': return '⇒'; case '↖': return '⇖'; case '↑': return '⇑'; case '↗': return '⇗';
-  ralt+lshift, ralt+capslock: '\u2b06' # ⬆ up arrow
+  ralt, scrolllock: '\u2191' # with this in tmux.conf: bind-key -n 0x2191 send-keys Up
+  ralt+lshift, ralt+capslock: '\u21d1' # with this in tmux.conf: bind-key -n 0x21d1 send-keys S-Up
   scrolllock+ralt: 'k'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'K'
   scrolllock+ralt+capslock+lshift: 'k'
@@ -444,8 +450,8 @@ key H {
   base: 'h'
   lshift, capslock: 'H'
   capslock+lshift: 'h'
-  ralt, scrolllock: fallback DPAD_LEFT
-  ralt+lshift, ralt+capslock: fallback DPAD_LEFT
+  ralt, scrolllock: '\u2190' # with this in tmux.conf: bind-key -n 0x2190 send-keys Left
+  ralt+lshift, ralt+capslock: '\u21d0' # with this in tmux.conf: bind-key -n 0x21d0 send-keys S-Left
   scrolllock+ralt: 'h'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'H'
   scrolllock+ralt+capslock+lshift: 'h'
@@ -453,6 +459,7 @@ key H {
   rshift+lshift: '\u03c8'
   ralt+rshift: '\u03a8'
 }
+
 key G {
   label: 'g'
   base: 'g'
@@ -460,7 +467,7 @@ key G {
   capslock+lshift: 'g'
   ralt, scrolllock: '-'
   ralt+lshift, ralt+capslock: '6'
-  scrolllock+ralt: 'g'
+  # scrolllock+ralt: 'g' # comenting this in order to try to make above 6 work... 
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'G'
   scrolllock+ralt+capslock+lshift: 'g'
   rshift: '>'
@@ -487,7 +494,7 @@ key Q {
   base: 'q'
   lshift, capslock: 'Q'
   capslock+lshift: 'q'
-  ralt, scrolllock: '\u001b' # escape
+  ralt, scrolllock: '\u001b' # escape, tested in nix-on-droid
   ralt+lshift, ralt+capslock: '\u001b' # escape
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'Q'
   scrolllock+ralt+capslock+lshift: 'q'
@@ -605,7 +612,7 @@ key S {
   base: 's'
   lshift, capslock: 'S'
   capslock+lshift: 's'
-  ralt, scrolllock: '\u0008' # ^H
+  ralt, scrolllock: '\u0008' # ^H works in nix-on-droid but not in Messaging.
   ralt+lshift, ralt+capslock: '\u0008' # ^H
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'S'
   scrolllock+ralt+capslock+lshift: 's'
@@ -722,7 +729,7 @@ key P {
   base: 'p'
   lshift, capslock: 'P'
   capslock+lshift: 'p'
-  ralt, scrolllock: fallback ENTER
+  ralt, scrolllock: 'p'
   scrolllock+ralt: 'p'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'P'
   scrolllock+ralt+capslock+lshift: 'p'
@@ -790,7 +797,8 @@ key PERIOD {
   base: ':'
   lshift, capslock: '/'
   capslock+lshift: ':'
-  ralt, scrolllock: ':'
+  ralt, scrolllock: ':' # my bad habit because of a limitation of -remap option of formerly used x11vnc
+  ralt+lshift, ralt+capslock: '/' # my bad habit because of a limitation of -remap option of formerly used x11vnc 
   scrolllock+ralt: '.'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u2022'
   scrolllock+ralt+capslock+lshift: '.'
@@ -804,8 +812,8 @@ key J {
   base: 'j'
   lshift, capslock: 'J'
   capslock+lshift: 'j'
-  ralt, scrolllock: fallback DPAD_DOWN
-  ralt+lshift, ralt+capslock: fallback DPAD_DOWN
+  ralt, scrolllock: '\u2193' # with this in tmux.conf: bind-key -n 0x2193 send-keys Down
+  ralt+lshift, ralt+capslock: '\u21d3' # with this in tmux.conf: bind-key -n 0x21d3 send-keys S-Down
   scrolllock+ralt: 'j'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'J'
   scrolllock+ralt+capslock+lshift: 'j'
@@ -817,9 +825,10 @@ key J {
 key SPACE {
   label: ' '
   base: ' '
-  ralt, scrolllock: '0'
-  rshift+lshift: '\u00a0'
-  ralt+rshift: '\u202F'
+  lshift, capslock: ' '
+  capslock+lshift: ' '
+  ralt, scrolllock: ' '
+  ralt+lshift, ralt+capslock: ' '
 }
 
 
@@ -1020,5 +1029,5 @@ key NUMPAD_9 {
   rshift+lshift: '\u226b'
   ralt+rshift: '\u2309'
 }
-# noremap à :w<bar>!scp ioanamanolescu@192.168.37.15:thumb-external-keyboard-layouts/app/src/main/res/raw/keyboard_layout_neo2.kcm /data/data/com.termux/files/home/p/r/20231016.keyboard ; rsync -avz /data/data/com.termux/files/home/p/r/K/INFORMATIQUE/android/historiques/thumb-external-keyboard-layouts ioanamanolescu@192.168.37.15: ; cvs commit -m sauver<c-m>
+# TODO aussi le 6 de la touche G ne marche pas et c'est maleusement WON'TFIX. Et aussi j'ai gardé l'habitude de altgr en trop pour faire le slash a cause du vnc avec remapping de scissors, donc le laisser ici.
 
