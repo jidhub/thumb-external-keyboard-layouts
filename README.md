@@ -30,7 +30,7 @@ Alt (keycode not found) conveniently just on left of previous key.
 CAPS_LOCK (keycode 58) is turned into PLUS.
 SHIFT_LEFT (keycord 42) is turned into CAPS_LOCK.
 
-The full map is on (the source code)[https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L159]
+The full map is on [the source code](https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L159)
 
 TODO:
 
