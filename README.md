@@ -1,6 +1,6 @@
 # Extra Physical Keyboard Layouts
 ## Development on pause until September 2024
-Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, and this layout ensures that the two left and right keys around the space key have this effect:
+Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, because its touchpad is below the keyboard to be able to lay my wrists. The Neo2 layout added by this github project ensures that the two left and right keys around the space key have this effect:
 
 Alt Shift Space AltGr Control
 
@@ -8,7 +8,7 @@ Warning, to this day I am the only user and this is the first time I am sharing 
 
 My philosophy is that a the learning curve for an azerty user is manageable.
 
-It think [this keyboard still available](https://www.amazon.fr/KIMISS-Chargeur-Ultraslim-Bluetooth-Touchpad/dp/B0C353T7J8) with a small space key is a clone of the keyboard I use, with the touchpad below the keyboard to be able to lay your wrists ([avoid others for confortable use](https://www.amazon.fr/Ovegna-Q9-rechargeable-R%C3%A9tro-%C3%A9clair%C3%A9e-Raspberry)).
+It think [this keyboard still available](https://www.amazon.fr/KIMISS-Chargeur-Ultraslim-Bluetooth-Touchpad/dp/B0C353T7J8) with a small space key is a clone of the keyboard I use, with the touchpad below the keyboard to be able to lay your wrists. This is ([an example of keyboard to avoid for confortable use](https://www.amazon.fr/Ovegna-Q9-rechargeable-R%C3%A9tro-%C3%A9clair%C3%A9e-Raspberry)).
 
 
 To build it on vim I execute the noremap on next line, then in android-studio, I use File/Close project, "terminate process", reopen this thumb project, use "run", switch off then on my bluetooth keyboard.
