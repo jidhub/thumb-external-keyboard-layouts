@@ -30,7 +30,7 @@ Alt (keycode not found) conveniently just on left of previous key.
 CAPS_LOCK (keycode 58) is turned into PLUS.
 SHIFT_LEFT (keycord 42) is turned into CAPS_LOCK.
 
-The full map is on [the source code](https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L159)
+The full map is on [the source code](https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L159).
 
 TODO:
 
@@ -62,13 +62,15 @@ bind-key -n 0x21d3 send-keys S-Down)
 
 - correct "Android settings/Language and keyboard/external keyboard/choose your current on screen keyboard/select the keyboard neo2" by inserting the actual strings, not just the version I just typed from memory.
 
-- AltGr typed for a key that has no "ralt" entry on app/src/main/res/raw/keyboard_layout_neo2.kcm opens a menu in [termux](https://f-droid.org/en/packages/com.termux/) and [nix-on-droid](https://f-droid.org/en/packages/com.termux.nix/).
+- AltGr typed for a key that has no "ralt" entry on app/src/main/res/raw/keyboard_layout_neo2.kcm opens a menu in [termux](https://f-droid.org/en/packages/com.termux/) and [nix-on-droid](https://f-droid.org/en/packages/com.termux.nix/) and closes itself immediatly before interfering with what I am typing. This is one of many visual problems.
 
 - AltGr is not working at all while opening the app [bVNC Free](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC&hl=en&gl=US).
 
 - AltGr Q does only escape in nix-on-droid.
 
 - cleanup the duplicates definitions of keys A..Z in (comment of source code)[https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L94] which I used to find keycodes.
+
+- rename neo2 to github-jidhub-thumb-external-keyboard-layouts.
 
 - understand how to uninstall this when installed by android-studio. I currently have 3 versions installed -_-.
 
