@@ -36,7 +36,7 @@ The full map is on (the source code)[https://github.com/jidhub/thumb-external-ke
 
 TODO:
 
-- strip keyboards other than neo2
+- strip keyboards other than neo2 out of the project.
 
 - make arrow work outside of tmux (my ~/.tmux.conf contains:
 bind-key -n 0x2190 send-keys Left
@@ -61,5 +61,9 @@ bind-key -n 0x21d3 send-keys S-Down)
 - AltGr is not working at all while opening the app [bVNC Free](https://play.google.com/store/apps/details?id=com.iiordanov.freebVNC&hl=en&gl=US).
 
 - AltGr Q does only escape in nix-on-droid.
+
+- cleanup the duplicates definitions of keys A..Z in (comment of source code)[https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L94] which I used to find keycodes.
+
+- understand how to uninstall this when installed by android-studio. I currently have 3 versions installed -_-.
 
 If you found this useful, you may [buy a drink to the project I forked](https://paypal.me/CalinDarie?locale.x=en_US) or ask for the Ergo-L community on Discord.
