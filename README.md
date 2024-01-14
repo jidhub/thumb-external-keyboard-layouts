@@ -1,5 +1,5 @@
 # Extrernal Keyboard Layout for thumbs
-Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, and because its touchpad is below the keyboard which creates space for my wrists (useful to stabilize the keyboard on your own lap). The Neo2 layout added by this github project ensures that the two left and right keys around the space key have this effect:
+Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, and because its touchpad is below the keyboard which creates space for my wrists (useful to stabilize the keyboard on your own lap). The Neo2 layout added by this github project ensures that the two left and right keys around the space key, close to my thumbs, have this effect:
 
 Alt Shift Space AltGr Control
 
