@@ -3,6 +3,10 @@ Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr
 
 Alt Shift Space AltGr Control
 
+I don't use keys ESC, 1, 6, 7, Y, B, BACKSPACE, and the arrows because they are too far from the rest position of my fingers. I type them with respectively AltGr+q, AltGr+Shift+i, AlgGr+Shift+v, AlgGr+Shift+f, AlgGr+u, AlgGr-n, AltGr-s, AltGr-h, AltGr-j, AltGr-k and AltGr-l. I type AltGr+i, AltGr+g, AltGr+f, AltGr+d and AltGr+Shift+d for the other frequent uses of these keys: &, -, è, | and `
+
+AltGr+Shift on number keys mostly types the qwerty characters shown on the keyboard, useful when I am tired.
+
 Warning, to this day I am the only user and this is the first time I am sharing this project, so please give feedbacks to help me.
 
 My philosophy is that a the learning curve for an azerty user is manageable.
