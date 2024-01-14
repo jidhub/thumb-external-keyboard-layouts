@@ -11,7 +11,7 @@ Warning, to this day I am the only user and this is the first time I am sharing 
 
 My philosophy is that a the learning curve for an azerty user is manageable.
 
-It think [this keyboard still available](https://www.amazon.fr/KIMISS-Chargeur-Ultraslim-Bluetooth-Touchpad/dp/B0C353T7J8) with a small space key is a clone of the keyboard I use, with the touchpad below the keyboard to be able to lay your wrists. This is ([an example of keyboard to avoid for confortable use](https://www.amazon.fr/Ovegna-Q9-rechargeable-R%C3%A9tro-%C3%A9clair%C3%A9e-Raspberry)).
+It think [this keyboard still available for 22€](https://www.amazon.fr/KIMISS-Chargeur-Ultraslim-Bluetooth-Touchpad/dp/B0C353T7J8) with a small space key is a clone of the keyboard I use, with the touchpad below the keyboard to be able to lay your wrists. I also link ([an example of keyboard to avoid for confortable use](https://www.amazon.fr/Ovegna-Q9-rechargeable-R%C3%A9tro-%C3%A9clair%C3%A9e-Raspberry)).
 
 
 To build it on vim I execute the noremap on next line, then in android-studio, I use File/Close project, "terminate process", reopen this thumb project, use "run", switch off then on my bluetooth keyboard.
