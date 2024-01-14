@@ -1,8 +1,12 @@
 # Extra Physical Keyboard Layouts
 ## Development on pause until September 2024
-Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed.
+Azerty-lafayette type keyboard for [my Bluetooth keyboard](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) for Android phones. No root needed. I chose that keyboard because its space key is small, and this layout ensures that the two left and right keys around the space key have this effect:
+
+Alt Shift Space AltGr Control
 
 Warning, to this day I am the only user and this is the first time I am sharing this project, so please give feedbacks to help me.
+
+My philosophy is that a the learning curve for an azerty user is manageable.
 
 To build it on vim I execute the noremap on next line, then in android-studio, I use File/Close project, "terminate process", reopen this thumb project, use "run", switch off then on my bluetooth keyboard.
 The noremap is: noremap à :w<bar>!scp mol8_adb:thumb-external-keyboard-layouts/app/src/main/res/raw/keyboard_layout_neo2.kcm /data/data/com.termux/files/home/p/r/20231016.keyboard ; rsync -avz /data/data/com.termux/files/home/p/r/K/INFORMATIQUE/android/historiques/thumb-external-keyboard-layouts mol8_adb: ; cvs commit -m sauver<c-m> 
@@ -17,8 +21,13 @@ In app/build.gradle and app/src/main/AndroidManifest.xml and app/src/main/java/v
 [<img alt='Fork of something available on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height="80px"/>](https://play.google.com/store/apps/details?id=varzan.extraKeyboardLayouts)
 [<img alt='Fork of something available on IzzyOnDroid' src='https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png' height="80px"/>](https://apt.izzysoft.de/fdroid/index/apk/varzan.extraKeyboardLayouts)
 
-Slash (keycode 53), just on right of small space key, is turned into AltGr.
+Slash (keycode 53), just on right of [space key](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), is turned into AltGr.
+BackSlash (keycode 43), just on right of previous key, is turined into CTRL_RIGHT.
+Windows (keycode 70), just on left of [space key](https://www.amazon.fr/gp/product/B08C4KWB5V/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), is turned into SHIFT_RIGHT.
+Alt (keycode not found) conveniently just on left of previous key.
+
 CAPS_LOCK (keycode 58) is turned into PLUS.
+SHIFT_LEFT (keycord 42) is turned into CAPS_LOCK.
 
 The full map is on (the source code)[https://github.com/jidhub/thumb-external-keyboard-layouts/blob/master/app/src/main/res/raw/keyboard_layout_neo2.kcm#L159]
 
