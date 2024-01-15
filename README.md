@@ -56,9 +56,9 @@ bind-key -n 0x21d3 send-keys S-Down)
 
 - make AltGr Shift G work (I don't understand why it does not)
 
-- build and push to fdroid,  (and learn how to do that)
+- build and push to fdroid, IzzyOnDroid and mabe Google Play (and learn how to do that)
 
-- understand why the android app Discord focuses out the draft message I am typing each time "close the onscren keyboard" is issued after each keypress. In Dicord, this app only lets me type one character, I have to refocus the draft after each keypress, and hence modifiers just unfocuses the draft. Also, there are visible display bugs after change of screen orientation or closing the Fold3. Same problem for the search box of Discord. (Whereas whatsapp is OK with this app.)
+- understand why the android app Discord focuses out the draft message I am typing each time "close the onscren keyboard" is issued after each keypress. In Dicord, this app only lets me type one character, I have to refocus the draft after each keypress, and hence modifiers just unfocuses the draft. Same problem for the search box of Discord. Discord app is sketchy in ways unrelated to my app: there are visible display bugs after change of screen orientation or closing the Fold3; some screen changes lower the low toolbar behind the Android button bar, and hides the Discord top toolbar behind the Android notification bar. (Whereas whatsapp is OK with this app.)
 
 - understand why after an Android Update, I have sometime to rechoose my keyboard with Android settings/Language and keyboard/external keyboard/choose your current on screen keyboard/select the keyboard neo2.
 
