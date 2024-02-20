@@ -54,7 +54,7 @@ map key 40 APOSTROPHE # e ö  ; je recherche encore dead '
 # cycle à suivre: sauver avec rsync, dans android-studio, File/Close project, "terminate process", reopen thumb project, run, eteindre puis ralluer clavier bluetoot, pous 
 
 map key 41 GRAVE # ` ~ ˀ dead ˙α ;
-map key 42 CAPS_LOCK # was SHIFT_LEFT
+map key 42 SHIFT_LEFT # keep that to enable easier learning curve, I had set it to CAPS_LOCK
 map key 43 CTRL_RIGHT # backslash key
 map key 44 W
 map key 45 X
@@ -69,7 +69,7 @@ map key 52 PERIOD
 map key 53 ALT_RIGHT # slash key
 # map key 53 A # il refuse, le clavier passe a querty
 # space truned in lshift
-# map key 57 SHIFT_LEFT # il refuse, le clavier passe a abcde, et si j eteins et rallume le clavier il passe a ewerty
+# map key 57 SHIFT_LEFT # il refuse, le clavier passe a abcde, et si j eteins et rallume le clavier il passe a qwerty
 map key 54 APOSTROPHE # instead of SHIFT_RIGHT
 # map key 55 L
 # map key 56 M
@@ -78,7 +78,7 @@ map key 57 SPACE
 
 # layer 4 modifiers
 # can't use sym because it's handled and overridden by the system
-map key 58 PLUS # was CAPS_LOCK FAIT20231016 pas urgent capslock a transformer en egal
+map key 58 CAPS_LOCK # default value, I used to set it to PLUS(EQUALS??) but I prefer to use AltGr+A for = and AltGr+Shift+A for + ; might be better some day to move equal elsewhere to let AltGr+A do â (a circumflex)
 # don't lose the actual functionality of the right lshift key. 
 # just make it undistinguuishable between it and the left lshift key.
 map key 59 F1 # ^V in Android mode
