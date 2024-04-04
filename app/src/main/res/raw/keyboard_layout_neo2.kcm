@@ -1,12 +1,30 @@
 # License MIT
 
+# parsing error messages are shown by https://source.android.com/docs/core/interaction/input/validate-keymaps 
+
 # Neo 2 (Classic)
 # https://neo-layout.org/Layouts/neo/
 # https://github.com/neo-layout/neo-layout/blob/master/A-REFERENZ-A/neo20.txt
 # https://git.neo-layout.org/neo/neo-layout/src/branch/master/android/multiling-o-keyboard_neo.json
 # https://android.googlesource.com/platform/frameworks/native/+/android-7.1.1_r58/include/input/InputEventLabels.h
+# <https://source.android.com/docs/core/interaction/input/key-character-map-files>functions:
 
-type OVERLAY
+#    '\uef00': When this behavior is performed, the text view consumes and removes the four characters preceding the cursor, interprets them as hex digits, and inserts the corresponding Unicode code point.
+#
+#    '\uef01': When this behavior is performed, the text view displays a character picker dialog that contains miscellaneous symbols.
+#
+#The system recognizes the following Unicode characters as combining diacritical dead key characters:
+#
+#    '\u0300': Grave accent.
+#    '\u0301': Acute accent.
+#    '\u0302': Circumflex accent.
+#    '\u0303': Tilde accent.
+#    '\u0308': Umlaut accent.
+#Type FULL
+#
+#FALLBACK  ajoute qqch qui marcye que si o appli ke gerr pas le ytf8, et ca aj9ute KEYCODE_ devant
+
+type OVERLAY # tiens, pas FULL ?? # https://android.googlesource.com/platform/frameworks/native/+/master/include/input/KeyCharacterMap.h?autodive=0%2F%2F%2F%2F%2F%2F // Overlay keyboard layout, more restrictive, may be published by applications, cannot override device-specific options.
 
 map key 1 ESCAPE
 map key 2 1
