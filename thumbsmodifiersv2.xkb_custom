@@ -13,14 +13,14 @@
 // │     │ 1 ! │ 2 > │ 3 < │ 4 $ │ 5 % │ 6 ^ │ 7 & │ 8 * │ 9 ± │ 0 ° │ ° } │ +   ┃          ┃
 // │ Alt │ & | │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = | ┃ ⌫        ┃
 // ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
-// ┃        ┃ A + │ Z   │ E € │ R   │ T   │ Y   │ U   │ I 1 │ O   │ P   │     │     ┃       ┃
-// ┃ ↹      ┃   = │     │   ê │     │     │   ù │   y │   & │   ô │     │ ⎇   │ Ctrl┃       ┃
+// ┃        ┃ A   │ Z 1 │ E   │ R 6 │ T   │ Y   │ U   │ I   │ O   │ P + │     │     ┃       ┃
+// ┃ ↹      ┃   â │   & │   ê │   - │   ù │   è │   û │   î │   ô │   = │ ⎇   │ Ctrl┃       ┃
 // ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
-// ┃         ┃ Q ␛ │ S ⌫ │ D ` │ F 7 │ G 6 │ H ← │ J ↓ │ K ↑ │ L → │ M ⏎ │ %   │ µ   ┃      ┃
-// ┃ ⇬       ┃   ␛ │   ⌫ │   | │   è │   - │   ← │   ↓ │   ↑ │   → │   ⏎ │ ù   │ *   ┃      ┃
+// ┃         ┃ Q ␛ │ S ⌫ │ D € │ F 7 │ G   │ H ← │ J ↓ │ K ↑ │ L → │ M ⏎ │ %   │ µ   ┃      ┃
+// ┃ ⇬       ┃   ␛ │   ⌫ │   | │   è │   ù │   ← │   ↓ │   ↑ │   → │   ⏎ │ ù   │ *   ┃      ┃
 // ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
 // ┃      ┃     │ W   │ X   │ C   │ V 6 │ B   │ N   │ ?   │ . / │ / / │ §   ┃               ┃
-// ┃ ⇧    ┃ ⇧   │     │     │     │   - │     │   b │ ,   │ ; : │ : : │ !   ┃ ⇧             ┃
+// ┃ ⇧    ┃ ⇧   │     │     │     │   - │   y │   b │ ,   │ ; : │ : : │ !   ┃ ⇧             ┃
 // ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
 // ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
 // ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
@@ -44,23 +44,23 @@ xkb_symbols "custom" {
     key <AE10> {[ agrave          , 0               , at              , degree          ]}; // à 0     @ °
 
     // Letters, first row
-    key <AD01> {[ a               , A               , equal           , plus            ]}; // a A     = +
-    key <AD02> {[ z               , Z               , VoidSymbol      , VoidSymbol      ]}; // z Z
-    key <AD03> {[ e               , E               , ecircumflex     , EuroSign        ]}; // e E     ê €
-    key <AD04> {[ r               , R               , VoidSymbol      , VoidSymbol      ]}; // r R
-    key <AD05> {[ t               , T               , VoidSymbol      , VoidSymbol      ]}; // t T
-    key <AD06> {[ y               , Y               , ugrave          , Ugrave          ]}; // y Y     ù Ù
-    key <AD07> {[ u               , U               , y               , Y               ]}; // u U     y Y
-    key <AD08> {[ i               , I               , ampersand       , 1               ]}; // i I     & 1
+    key <AD01> {[ a               , A               , acircumflex     , Acircumflex     ]}; // a A     â Â
+    key <AD02> {[ z               , Z               , ampersand       , 1               ]}; // z Z     & 1
+    key <AD03> {[ e               , E               , ecircumflex     , Ecircumflex     ]}; // e E     ê Ê
+    key <AD04> {[ r               , R               , minus           , 6               ]}; // r R     - 6
+    key <AD05> {[ t               , T               , ugrave          , Ugrave          ]}; // t T     ù Ù
+    key <AD06> {[ y               , Y               , egrave          , Egrave          ]}; // y Y     è È
+    key <AD07> {[ u               , U               , ucircumflex     , Ucircumflex     ]}; // u U     û Û
+    key <AD08> {[ i               , I               , icircumflex     , Icircumflex     ]}; // i I     î Î
     key <AD09> {[ o               , O               , ocircumflex     , Ocircumflex     ]}; // o O     ô Ô
-    key <AD10> {[ p               , P               , VoidSymbol      , VoidSymbol      ]}; // p P
+    key <AD10> {[ p               , P               , equal           , plus            ]}; // p P     = +
 
     // Letters, second row
     key <AC01> {[ q               , Q               , Escape          , Escape          ]}; // q Q     ␛ ␛
     key <AC02> {[ s               , S               , BackSpace       , BackSpace       ]}; // s S     ⌫ ⌫
-    key <AC03> {[ d               , D               , bar             , grave           ]}; // d D     | `
+    key <AC03> {[ d               , D               , bar             , EuroSign        ]}; // d D     | €
     key <AC04> {[ f               , F               , egrave          , 7               ]}; // f F     è 7
-    key <AC05> {[ g               , G               , minus           , 6               ]}; // g G     - 6
+    key <AC05> {[ g               , G               , ugrave          , Ugrave          ]}; // g G     ù Ù
     key <AC06> {[ h               , H               , Left            , Left            ]}; // h H     ← ←
     key <AC07> {[ j               , J               , Down            , Down            ]}; // j J     ↓ ↓
     key <AC08> {[ k               , K               , Up              , Up              ]}; // k K     ↑ ↑
@@ -72,11 +72,11 @@ xkb_symbols "custom" {
     key <AB02> {[ x               , X               , VoidSymbol      , VoidSymbol      ]}; // x X
     key <AB03> {[ c               , C               , VoidSymbol      , VoidSymbol      ]}; // c C
     key <AB04> {[ v               , V               , minus           , 6               ]}; // v V     - 6
-    key <AB05> {[ b               , B               , VoidSymbol      , VoidSymbol      ]}; // b B
+    key <AB05> {[ b               , B               , y               , Y               ]}; // b B     y Y
     key <AB06> {[ n               , N               , b               , B               ]}; // n N     b B
     key <AB07> {[ comma           , question        , VoidSymbol      , VoidSymbol      ]}; // , ?
     key <AB08> {[ semicolon       , period          , colon           , slash           ]}; // ; .     : /
-    key <AB09> {[ colon           , slash           , colon           , slash           ]}; // : /     : /
+    key <AB09> {[ colon           , slash           , colon           , slash           ]}; // : /     : / # key unavailable for bluetooth keyboard on bVNC combined with x11vnc -remap 
     key <AB10> {[ exclam          , section         , VoidSymbol      , VoidSymbol      ]}; // ! §
 
     // Pinky keys
