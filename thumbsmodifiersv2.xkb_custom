@@ -14,13 +14,13 @@
 // │ Alt │ & | │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = | ┃ ⌫        ┃
 // ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
 // ┃        ┃ A   │ Z 1 │ E   │ R 6 │ T   │ Y   │ U   │ I   │ O   │ P + │     │     ┃       ┃
-// ┃ ↹      ┃   â │   & │   ê │   - │   ù │   è │   û │   î │   ô │   = │ ⎇   │ Ctrl┃       ┃
+// ┃ ↹      ┃   â │   & │   ê │   - │   y │     │   û │   î │   ô │   = │ ⎇   │ Ctrl┃       ┃
 // ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
 // ┃         ┃ Q ␛ │ S ⌫ │ D € │ F 7 │ G   │ H ← │ J ↓ │ K ↑ │ L → │ M ⏎ │ %   │ µ   ┃      ┃
 // ┃ ⇬       ┃   ␛ │   ⌫ │   | │   è │   ù │   ← │   ↓ │   ↑ │   → │   ⏎ │ ù   │ *   ┃      ┃
 // ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
 // ┃      ┃     │ W   │ X   │ C   │ V 6 │ B   │ N   │ ?   │ . / │ / / │ §   ┃               ┃
-// ┃ ⇧    ┃ ⇧   │     │     │     │   - │   y │   b │ ,   │ ; : │ : : │ !   ┃ ⇧             ┃
+// ┃ ⇧    ┃ ⇧   │     │     │     │   - │     │   b │ ,   │ ; : │ : : │ !   ┃ ⇧             ┃
 // ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
 // ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
 // ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
@@ -48,8 +48,8 @@ xkb_symbols "custom" {
     key <AD02> {[ z               , Z               , ampersand       , 1               ]}; // z Z     & 1
     key <AD03> {[ e               , E               , ecircumflex     , Ecircumflex     ]}; // e E     ê Ê
     key <AD04> {[ r               , R               , minus           , 6               ]}; // r R     - 6
-    key <AD05> {[ t               , T               , ugrave          , Ugrave          ]}; // t T     ù Ù
-    key <AD06> {[ y               , Y               , egrave          , Egrave          ]}; // y Y     è È
+    key <AD05> {[ t               , T               , y               , Y               ]}; // t T     y Y
+    key <AD06> {[ y               , Y               , VoidSymbol      , VoidSymbol      ]}; // y Y        
     key <AD07> {[ u               , U               , ucircumflex     , Ucircumflex     ]}; // u U     û Û
     key <AD08> {[ i               , I               , icircumflex     , Icircumflex     ]}; // i I     î Î
     key <AD09> {[ o               , O               , ocircumflex     , Ocircumflex     ]}; // o O     ô Ô
@@ -72,7 +72,7 @@ xkb_symbols "custom" {
     key <AB02> {[ x               , X               , VoidSymbol      , VoidSymbol      ]}; // x X
     key <AB03> {[ c               , C               , VoidSymbol      , VoidSymbol      ]}; // c C
     key <AB04> {[ v               , V               , minus           , 6               ]}; // v V     - 6
-    key <AB05> {[ b               , B               , y               , Y               ]}; // b B     y Y
+    key <AB05> {[ b               , B               , VoidSymbol      , VoidSymbol      ]}; // b B        
     key <AB06> {[ n               , N               , b               , B               ]}; // n N     b B
     key <AB07> {[ comma           , question        , VoidSymbol      , VoidSymbol      ]}; // , ?
     key <AB08> {[ semicolon       , period          , colon           , slash           ]}; // ; .     : /
