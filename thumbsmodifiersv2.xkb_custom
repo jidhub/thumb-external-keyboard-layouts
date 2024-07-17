@@ -7,7 +7,7 @@
 // Version       : 0.0.1
 // License       : WTFPL - Do What The Fuck You Want Public License
 //
-// custom AZERTY with AltGr layout to avoid keys ²BY167=^$ù*< and have thumb on Scissor's modifiers
+// custom AZERTY with AltGr layout to avoid keys ²BY167=^$ù*< and move modifiers of KeySonic's Scissor under thumbs
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
 // │     │ 1 ! │ 2 > │ 3 < │ 4 $ │ 5 % │ 6 ^ │ 7 & │ 8 * │ 9 ± │ 0 ° │ ° } │ +   ┃          ┃
