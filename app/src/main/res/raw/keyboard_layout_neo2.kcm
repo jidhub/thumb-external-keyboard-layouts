@@ -319,7 +319,7 @@ key 9 {
   capslock+lshift: '\u00e7'
   ralt, scrolllock: '^'
   scrolllock+ralt: '9'
-  ralt+lshift, ralt+capslock: '('
+  ralt+lshift, ralt+capslock:  '\u00b1' # ±
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u201c'
   scrolllock+ralt+capslock+lshift: '9'
   rshift: '\u2018'
@@ -334,7 +334,7 @@ key 0 {
   capslock: '\u00c0'
   capslock+lshift: '\u00e0'
   ralt, scrolllock: '@'
-  ralt+lshift, ralt+capslock: ')'
+  ralt+lshift, ralt+capslock: '\u00b0' # °
   scrolllock+ralt: '0'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: '\u201d'
   scrolllock+ralt+capslock+lshift: '0'
@@ -483,8 +483,8 @@ key G {
   base: 'g'
   lshift, capslock: 'G'
   capslock+lshift: 'g'
-  ralt, scrolllock: '-'
-  ralt+lshift, ralt+capslock: '6'
+  ralt, scrolllock: '\u00f9' # ù
+  ralt+lshift, ralt+capslock: '\u00d9' # Ù
   # scrolllock+ralt: 'g' # comenting this in order to try to make above 6 work... 
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'G'
   scrolllock+ralt+capslock+lshift: 'g'
@@ -498,7 +498,7 @@ key F {
   base: 'f'
   lshift, capslock: 'F'
   capslock+lshift: 'f'
-  ralt, scrolllock: '\u00e8'
+  ralt, scrolllock: '\u00e8' # è
   ralt+lshift, ralt+capslock: '7'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'F'
   scrolllock+ralt+capslock+lshift: 'f'
@@ -556,8 +556,8 @@ key U {
   base: 'u'
   lshift, capslock: 'U'
   capslock+lshift: 'u'
-  ralt, scrolllock: 'y'
-  ralt+lshift, ralt+capslock: 'Y'
+  ralt, scrolllock: '\u00fb' # û
+  ralt+lshift, ralt+capslock: '\u00db' # Û
   scrolllock+ralt: 'u'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'U'
   scrolllock+ralt+capslock+lshift: 'u'
@@ -571,8 +571,8 @@ key I {
   base: 'i'
   lshift, capslock: 'I'
   capslock+lshift: 'i'
-  ralt, scrolllock: '&'
-  ralt+lshift, ralt+capslock: '1'
+  ralt, scrolllock: '\u00ee' # î
+  ralt+lshift, ralt+capslock: '\u00ce' # Î
   scrolllock+ralt: 'i'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'I'
   scrolllock+ralt+capslock+lshift: 'i'
@@ -586,8 +586,8 @@ key A {
   base: 'a'
   lshift, capslock: 'A'
   capslock+lshift: 'a'
-  ralt, scrolllock: '='
-  ralt+lshift, ralt+capslock: '+'
+  ralt, scrolllock: '\u00e2' # â
+  ralt+lshift, ralt+capslock: '\u00c2' # Â
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'A'
   scrolllock+ralt+capslock+lshift: 'a'
   rshift: '{'
@@ -601,7 +601,7 @@ key E {
   lshift, capslock: 'E'
   capslock+lshift: 'e'
   ralt, scrolllock: '\u00ea' # ê
-  ralt+lshift, ralt+capslock: '\u20ac' # euro
+  ralt+lshift, ralt+capslock: '\u00ca' # Ê
   scrolllock+ralt: 'e'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'E'
   scrolllock+ralt+capslock+lshift: 'e'
@@ -659,7 +659,8 @@ key R {
   base: 'r'
   lshift, capslock: 'R'
   capslock+lshift: 'r'
-  ralt, scrolllock: '5'
+  ralt, scrolllock: '-'
+  ralt+lshift, ralt+capslock: '6'
   scrolllock+ralt: 'r'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'R'
   scrolllock+ralt+capslock+lshift: 'r'
@@ -673,7 +674,8 @@ key T {
   base: 't'
   lshift, capslock: 'T'
   capslock+lshift: 't'
-  ralt, scrolllock: '6'
+  ralt, scrolllock: 'y'
+  ralt+lshift, ralt+capslock: 'Y'
   scrolllock+ralt: 't'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'T'
   scrolllock+ralt+capslock+lshift: 't'
@@ -688,7 +690,7 @@ key D {
   lshift, capslock: 'D'
   capslock+lshift: 'd'
   ralt, scrolllock: '|'
-  ralt+lshift, ralt+capslock: '`'
+  ralt+lshift, ralt+capslock: '\u20ac' # euro
   scrolllock+ralt: 'd'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'D'
   scrolllock+ralt+capslock+lshift: 'd'
@@ -702,8 +704,8 @@ key Y {
   base: 'y'
   lshift, capslock: 'Y'
   capslock+lshift: 'y'
-  ralt, scrolllock: '\u00f9' # ù
-  ralt+lshift, ralt+capslock: '\u00d9' # Ù
+  ralt, scrolllock: '\u00c9' # É
+  ralt+lshift, ralt+capslock: '\u00c8' # È
   scrolllock+ralt: 'y'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'Y'
   scrolllock+ralt+capslock+lshift: 'y'
@@ -717,8 +719,8 @@ key SEMICOLON {
   base: ';'
   lshift, capslock: '.'
   capslock+lshift: ';'
-  ralt, scrolllock: '|'
-  ralt+lshift, ralt+capslock: '`'
+  ralt, scrolllock: ':'
+  ralt+lshift, ralt+capslock: '/'
 }
 
 key APOSTROPHE {
@@ -747,7 +749,8 @@ key P {
   base: 'p'
   lshift, capslock: 'P'
   capslock+lshift: 'p'
-  ralt, scrolllock: 'p'
+  ralt, scrolllock: '='
+  ralt+lshift, ralt+capslock: '+'
   scrolllock+ralt: 'p'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'P'
   scrolllock+ralt+capslock+lshift: 'p'
@@ -761,19 +764,20 @@ key Z {
   base: 'z'
   lshift, capslock: 'Z'
   capslock+lshift: 'z'
+  ralt, scrolllock: '&'
+  ralt+lshift, ralt+capslock: '1'
   rshift: '`'
 #  ralt, scrolllock: fallback UNDO
   rshift+lshift: '\u03b6'
-  ralt+rshift: '\u2124'
 }
 
 key B {
   label: 'b'
   base: 'b'
   lshift, capslock: 'B'
-  capslock+lshift: 'b'
-  ralt, scrolllock: ':'
-  scrolllock+ralt: 'b'
+  capslock+lshift: '\u00c7' # Ç
+  ralt, scrolllock: '\u00c0' # À
+  ralt+lshift, ralt+capslock: '1'
   scrolllock+ralt+lshift, scrolllock+ralt+capslock: 'B'
   scrolllock+ralt+capslock+lshift: 'b'
   rshift: '+'
